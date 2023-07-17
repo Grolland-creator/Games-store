@@ -55,8 +55,8 @@ const ModalBuyCart: FC<PropsModalBuyCart> = ({ messageApi, totalPrice }) => {
             title={`Buy all games from the cart`}
             centered
             open={isModalShow}
-            cancelText="Отменить"
-            okText="Подтвердить покупку"
+            cancelText="Cancel"
+            okText="Confirm the purchase"
             confirmLoading={confirmLoading}
             onOk={() => modalOnOk()}
             onCancel={() => setIsModalShow(false)}

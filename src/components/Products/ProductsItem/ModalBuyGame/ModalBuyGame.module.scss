@@ -1,5 +1,10 @@
 .form {
    display: flex;
+
+   @media (max-width: 480px) {
+      flex-direction: column;
+   }
+
    &__image {
       width: 200px;
       margin: 0 50px 0 0;
@@ -8,18 +13,28 @@
    &__name {
       font-size: 30px;
       font-weight: 600;
+
    }
 
    &__price {
       font-size: 20px;
       font-weight: 600;
       padding-bottom: 30px;
+
+      @media (max-width: 480px) {
+         padding-bottom: 0;
+      }
    }
 
    .count {
       display: flex;
       align-items: center;
       padding-bottom: 80px;
+
+      @media (max-width: 480px) {
+         padding-bottom: 10px;
+      }
+
       &__span {
          font-size: 18px;
          margin-top: 3px;
@@ -27,25 +42,29 @@
 
       .decrementCount {
          font-size: 30px;
-         padding: 0px  0px 0px 10px;
+         padding: 0px 0px 0px 10px;
       }
+
       .incrementCount {
          margin-top: 3px;
          font-size: 30px;
          padding: 0px 10px 0 10px;
       }
+
       .gameCount {
          font-size: 20px;
          padding-left: 10px;
          font-weight: 600;
       }
    }
+
    .general__count {
-      font-weight: 600; 
+      font-weight: 600;
       font-size: 18px;
    }
 
 }
+
 .sendPassword {
    padding: 15px 0 7px 0;
 }

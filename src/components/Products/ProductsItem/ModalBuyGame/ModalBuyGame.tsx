@@ -14,10 +14,10 @@ interface PropsModalBuyGame {
 
 const ModalBuyGame: FC<PropsModalBuyGame> = ({ game, user, messageApi }) => {
    const [gameCount, setGameCount] = useState<number>(1)
-   const [password, setPassword] = useState('')
-   const [errorPassword, setErrorPassword] = useState('')
-   const [isModalShow, setIsModalShow] = useState(false)
-   const [confirmLoading, setConfirmLoading] = useState(false);
+   const [password, setPassword] = useState<string>('')
+   const [errorPassword, setErrorPassword] = useState<string>('')
+   const [isModalShow, setIsModalShow] = useState<boolean>(false)
+   const [confirmLoading, setConfirmLoading] = useState<boolean>(false);
 
    const modalOnOk = () => {
       setConfirmLoading(true);
@@ -45,7 +45,12 @@ const ModalBuyGame: FC<PropsModalBuyGame> = ({ game, user, messageApi }) => {
    return (
 
       <>
-         <button onClick={() => setIsModalShow(true)} className={cl.button}>Buy</button>
+         <button
+            onClick={() => setIsModalShow(true)}
+            className={cl.button}
+         >
+            Buy
+         </button>
          <Modal
             title={`Купить ${game.name}`}
             centered
@@ -91,7 +96,11 @@ const ModalBuyGame: FC<PropsModalBuyGame> = ({ game, user, messageApi }) => {
                <Form.Item
                   label=""
                   name="password"
-                  rules={[rules.required("Please enter the password"), rules.max(20, 'The password cannot be more than 20 characters'), rules.min(8, 'The password cannot be less than 8 characters')]}
+                  rules={[
+                     rules.required("Please enter the password"),
+                     rules.max(20, 'The password cannot be more than 20 characters'),
+                     rules.min(8, 'The password cannot be less than 8 characters')
+                  ]}
                >
                   <Input.Password
                      placeholder='Enter password'
@@ -104,7 +113,9 @@ const ModalBuyGame: FC<PropsModalBuyGame> = ({ game, user, messageApi }) => {
                   />
                </Form.Item>
             </Form>
-            {errorPassword && <div className={cl.errorPassword}>{errorPassword}</div>}
+            {errorPassword &&
+               <div className={cl.errorPassword}>{errorPassword}</div>
+            }
          </Modal>
       </>
    )
