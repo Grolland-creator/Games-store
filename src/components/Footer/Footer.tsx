@@ -14,17 +14,17 @@ const Footer: FC = () => {
                <ul className={cl.footer__links}>
                   <li className={cl.footer__link}>
                      <a href='##'>
-                        <img src="../assets/img/footer-icons/Facebook.png" alt="twitter" />
+                        <img src="../assets/img/footer-icons/Facebook.png" alt="facebook" />
                      </a>
                   </li>
                   <li className={cl.footer__link}>
                      <a href='##'>
-                        <img src="../assets/img/footer-icons/instagram.png" alt="facebook" />
+                        <img src="../assets/img/footer-icons/instagram.png" alt="instagram" />
                      </a>
                   </li>
                   <li className={cl.footer__link}>
                      <a href='##'>
-                        <img src="../assets/img/footer-icons/twitter.png" alt="instagram" />
+                        <img src="../assets/img/footer-icons/Twitter.png" alt="twitter" />
                      </a>
                   </li>
                </ul>
