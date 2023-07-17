@@ -15,13 +15,13 @@ const DeleteGame: FC = () => {
    const successMessage = useCallback(() => {
       messageApi.open({
          type: 'success',
-         content: `Вы успешно удалили игру`,
+         content: `You successfully deleted the game`,
       });
    }, [messageApi]);
    const errorMessage = useCallback((e: any) => {
       messageApi.open({
          type: 'error',
-         content: `Произошла ошибка при удаление игры: ${e}`,
+         content: `There was an error when deleting the game: ${e}`,
       });
    }, [messageApi]);
 

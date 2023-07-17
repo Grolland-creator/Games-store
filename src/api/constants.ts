@@ -1,0 +1,1 @@
+export const baseUrl: string = 'https://games-store-backend.onrender.com/'

@@ -1,9 +1,10 @@
 import axios, { AxiosResponse } from "axios"
 import { IComment } from "../models/IGame"
+import { baseUrl } from "./constants"
 
 export default class GameService {
    static async setComment(id: number, idGame: number, aftor: string, comment: string, comments: IComment[]): Promise<AxiosResponse<IComment>> {
-      return axios.patch<IComment>(`http://localhost:3001/games/${idGame}`, JSON.stringify({
+      return axios.patch<IComment>(`${baseUrl}games/${idGame}`, JSON.stringify({
          comments: [...comments, {
             aftor, comment, id
          }]
@@ -15,7 +16,7 @@ export default class GameService {
    }
 
    static async setComments(idGame: number, comments: IComment[]): Promise<AxiosResponse<IComment>> {
-      return axios.patch<IComment>(`http://localhost:3001/games/${idGame}`, JSON.stringify({ comments: [...comments] }), {
+      return axios.patch<IComment>(`${baseUrl}games/${idGame}`, JSON.stringify({ comments: [...comments] }), {
          headers: {
             'Content-Type': 'application/json',
          }

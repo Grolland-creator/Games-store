@@ -1,9 +1,10 @@
 import axios, { AxiosResponse } from "axios";
 import { IGame } from "../models/IGame";
+import { baseUrl } from "./constants";
 
 export default class GameService {
    static async getGames(limit: number = 5, page: number = 1): Promise<AxiosResponse<IGame[]>> {
-      return axios.get<IGame[]>('http://localhost:3001/games', {
+      return axios.get<IGame[]>(`${baseUrl}games`, {
          params: {
             _limit: limit,
             _page: page
@@ -12,7 +13,7 @@ export default class GameService {
    }
 
    static async addGame({ name, ageLimit, description, rating, platform, price, comments, genre, image }: IGame): Promise<AxiosResponse<IGame>> {
-      return axios.post<IGame>('http://localhost:3001/games', JSON.stringify({
+      return axios.post<IGame>(`${baseUrl}games`, JSON.stringify({
          name, ageLimit, description, rating, platform, price, comments, genre, image
       }), {
          headers: {
@@ -22,10 +23,10 @@ export default class GameService {
    }
 
    static async deleteGame(id: number): Promise<AxiosResponse<number>> {
-      return axios.delete<number>(`http://localhost:3001/games/${id}`)
+      return axios.delete<number>(`${baseUrl}games/${id}`)
    }
 
    static async getGameById(id: number): Promise<AxiosResponse<IGame>> {
-      return axios.get<IGame>(`http://localhost:3001/games/${id}`)
+      return axios.get<IGame>(`${baseUrl}games/${id}`)
    }
 }
