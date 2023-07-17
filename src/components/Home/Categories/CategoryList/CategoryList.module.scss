@@ -1,0 +1,36 @@
+.container {
+   margin-bottom: 50px;
+   position: relative;
+   &::after{
+      content:'';
+      position: absolute;
+      height: 2px;
+      width: 98%;
+      top: 99%;
+      left: 50%;
+      transform: translate(-50%);
+      background-color: #ababab;
+   }
+}
+
+.title {
+   font-size: 30px;
+   font-weight: 600;
+   margin: 0 0 20px 16px;
+   @media (max-width: 380px){
+      text-align: center;
+      margin: 0 0 20px 0;
+   }
+}
+
+.card {
+   margin: 0px 16px;
+   padding-bottom: 32px;
+   height: 100%;
+   flex: 1 1 auto;
+   display: flex;
+   @media (max-width: 970px){
+      margin: 0 8px;
+   }
+}
+

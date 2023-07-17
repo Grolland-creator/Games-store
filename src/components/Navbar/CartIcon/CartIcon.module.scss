@@ -1,0 +1,29 @@
+.numberCart {
+   position: absolute;
+   width: 18px;
+   border-radius: 50%;
+   height: 18px;
+   top: -6px;
+   right: 7px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   background-color: #e89f71;
+   font-size: 12px;
+
+}
+
+.container {
+   position: relative;
+}
+
+.cart {
+   font-size: 30px;
+   padding-right: 14px;
+   cursor: pointer;
+   transition: all 0.3s ease 0s;
+   &:hover {
+      transform: scale(1.05);
+   }
+}

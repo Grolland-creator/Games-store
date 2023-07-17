@@ -1,0 +1,66 @@
+.title {
+   font-size: 25px;
+   font-weight: 600;
+   padding-bottom: 40px;
+
+   @media (max-width: 575px){
+      padding-bottom: 20px;
+   }
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   width: 100%;
+   padding-bottom: 20px;
+}
+
+.upload {
+   display: flex;
+   width: 100%;
+
+   &__text {
+      width: 50%;
+   }
+}
+
+.image {
+   object-fit: contain;
+   width: 100px;
+   height: 100px;
+}
+
+.containerImage {
+   margin-right: 20px;
+   width: 100px;
+   height: 100px;
+}
+
+.pictureUploader {
+   width: auto !important;
+}
+
+.inputName {
+   width: 300px;
+}
+
+.inputPrice {
+   width: 100px;
+}
+
+.inputAgeLimit {
+   width: 90px;
+}
+
+.inputRating {
+   width: 50px;
+}
+
+.inputGenre {
+   width: 200px;
+}
+
+.checkAll {
+   padding-right: 40px;
+}

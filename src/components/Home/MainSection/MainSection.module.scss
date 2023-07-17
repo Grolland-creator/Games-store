@@ -1,0 +1,112 @@
+.inputBlock {
+   position: relative;
+}
+
+.wrapper {
+   background-color: #f3e8e8;
+   width: 100%;
+   height: calc(100vh - 50px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container {
+   max-width: 1230px;
+   padding: 0 15px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-bottom: 60px;
+   @media (max-width: 767px){
+      .inputBlock {
+         flex-direction: column;
+         width: 300px !important;
+      }
+   }
+   @media (max-width: 479px){
+      .text {
+         font-size: 16px !important;
+      }
+   }
+   .blockText {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 50px;
+      .logo {
+         padding-bottom: 20px;
+      }
+      .text {
+         font-size: 20px;
+         text-align: center;
+         max-width: 800px;
+      }
+   }
+
+   .inputBlock {
+      display: flex;
+      width: 600px;
+      align-items: center;
+      gap: 10px;
+      .inputText {
+         font-size: 16px;
+         font-weight: 600;
+      }
+      .input {
+         width: 300px;
+      }
+   }
+}
+
+.scrollDown {
+   position: absolute;
+   bottom: calc(7vh);
+   left: 50%;
+   transform: translate(-50%, 0);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 3;
+   @media (max-height: 540px ){
+      display: none;
+   }
+   img{
+      z-index: 2;
+      position: relative;
+   }
+}
+
+.scrollDownImage {
+   border-radius: 50%;
+   width: 65px;
+   height: 65px;
+   border: 3px solid #ffffff; 
+   background-color: #afabab;
+   transition: all 0.3s;
+   position: relative;
+   &:hover{
+         img{
+            animation-play-state: paused;
+         }
+   }
+   img{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      animation: Scroll-down 2s cubic-bezier(0.55, 0.055, 0.675, 0.19) infinite  running;
+   }
+}
+@keyframes Scroll-down {
+0%{
+   transform: translate(-50%, -70%) scale(1);
+}
+50%{
+   transform: translate(-50%, -20%) scale(1.1, 1.1);
+}
+100%{
+   transform: translate(-50%, -70%) scale(1, 1);
+}
+}

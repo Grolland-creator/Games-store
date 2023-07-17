@@ -1,0 +1,102 @@
+.form {
+   display: flex;
+   &__image {
+      width: 200px;
+      margin: 0 50px 0 0;
+   }
+
+   &__name {
+      font-size: 30px;
+      font-weight: 600;
+   }
+
+   &__price {
+      font-size: 20px;
+      font-weight: 600;
+      padding-bottom: 30px;
+   }
+
+   .count {
+      display: flex;
+      align-items: center;
+      padding-bottom: 80px;
+      &__span {
+         font-size: 18px;
+         margin-top: 3px;
+      }
+
+      .decrementCount {
+         font-size: 30px;
+         padding: 0px  0px 0px 10px;
+      }
+      .incrementCount {
+         margin-top: 3px;
+         font-size: 30px;
+         padding: 0px 10px 0 10px;
+      }
+      .gameCount {
+         font-size: 20px;
+         padding-left: 10px;
+         font-weight: 600;
+      }
+   }
+   .general__count {
+      font-weight: 600; 
+      font-size: 18px;
+   }
+
+}
+.sendPassword {
+   padding: 15px 0 7px 0;
+}
+
+.errorPassword {
+   color: red;
+}
+
+.button {
+   display: inline-block;
+   padding: 0.58rem 1rem;
+   border-radius: 7rem;
+   color: #fff;
+   text-transform: uppercase;
+   font-size: 0.7rem;
+   letter-spacing: .15rem;
+   transition: all .3s;
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+
+   &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(255, 179, 0);
+      border-radius: 10rem;
+      z-index: -2;
+   }
+
+   &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0%;
+      height: 100%;
+      background-color: darken(rgb(255, 179, 0), 15%);
+      transition: all .3s;
+      border-radius: 10rem;
+      z-index: -1;
+   }
+
+   &:hover {
+      color: #fff;
+
+      &:before {
+         width: 100%;
+      }
+   }
+}

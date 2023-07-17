@@ -1,0 +1,87 @@
+.itemProduct {
+   background-color: #f4f5f7;
+   display: flex;
+   position: relative;
+   flex-direction: column;
+   flex: 1 1 auto;
+
+   &__image {
+      padding-bottom: 142%;
+      position: relative;
+
+   }
+
+   &__img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+   }
+
+   &__body {
+      flex: 1 1 auto;
+      padding: 10px 10px 20px 10px;
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__title {
+      font-weight: 600;
+      line-height: 120%;
+      margin-bottom: 4px;
+      font-size: 18px;
+   }
+
+   &__ageLimit {
+      line-height: 150%;
+      margin-bottom: 4px;
+   }
+
+   &__price {
+      font-weight: 600;
+      margin-bottom: 4px;
+   }
+
+   &__prices {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      line-height: 150%;
+   }
+
+   &__genre {
+      font-size: 15px;
+      font-weight: 600;
+      padding-bottom: 10px;
+      padding-top: 5px;
+   }
+
+   &__content {
+      flex: 1 1 auto;
+   }
+}
+
+
+
+.actionsProduct__body {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+
+   .actionsProduct__button {
+      font-size: 15px;
+      color: #e89f71;
+      background-color: #fff;
+      flex: 1 1 100%;
+      justify-content: center;
+      align-items: center;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      padding: 0 0.9375rem;
+      text-align: center;
+      transition: all .3s ease 0s;
+      min-height: 3rem;
+   }
+}

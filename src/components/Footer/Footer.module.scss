@@ -1,0 +1,35 @@
+.footer {
+   background-color: #14171A;
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 41px 0;
+   }
+   
+   &__links {
+      display: flex;
+      column-gap: 15px;
+   }
+   
+   &__link {
+      transition: all 0.3s;
+      
+      &:hover{
+         transform: scale(1.15);
+      }
+   }
+   @media (max-width:400px) {
+      &__body{
+         flex-direction: column;
+      }
+      &__logo{
+         padding-bottom: 40px;
+      }
+   }
+}
+.container {
+   margin: 0 auto;
+   max-width: 1200px;
+   padding: 0 20px;
+}

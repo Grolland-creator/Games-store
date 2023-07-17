@@ -1,0 +1,23 @@
+.container {
+   max-width: 1230px;
+   margin: 0 auto;
+   padding: 0 15px;
+   display: flex;
+   flex-direction: column;
+}
+
+.wrapper {
+   background-color: #dfd7d7;
+}
+
+.title {
+   text-align: center;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   font-size: 50px;
+   font-weight: 600;
+   @media (max-width: 380px){
+      font-size: 35px; 
+   }
+}
+
