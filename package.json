@@ -1,5 +1,5 @@
 {
-  "name": "sneaker-shop",
+  "name": "games-store",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,14 +10,25 @@
     "@types/node": "^16.18.38",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "@types/react-redux": "^7.1.25",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/redux": "^3.6.0",
+    "antd": "^5.6.3",
+    "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.1.1",
+    "react-router-dom": "^6.14.1",
     "react-scripts": "5.0.1",
+    "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2",
+    "sass": "^1.63.6",
+    "swiper": "^9.4.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start & json-server --watch db.json --port 3001",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
