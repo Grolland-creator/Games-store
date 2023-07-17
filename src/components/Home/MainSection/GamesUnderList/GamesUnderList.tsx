@@ -14,7 +14,7 @@ const GamesUnderList: FC<PropsGamesUnderList> = ({ searchedGames }) => {
          <div className={cl.games__items}>
             {searchedGames.length
                ?
-               searchedGames.map((game: IGame, index) =>
+               searchedGames.map((game: IGame) =>
                   <GameUnderCard
                      key={game.id}
                      title={game.name}

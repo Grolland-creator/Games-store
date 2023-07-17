@@ -54,7 +54,7 @@ const MainSection: FC<PropsMainSection> = ({ myRef }) => {
                      setFocus(true)
                   }}
                   onBlur={() => {
-                     setFocus(false)
+                     setTimeout(() => setFocus(false), 100)
                   }}
                   placeholder="search..."
                />
