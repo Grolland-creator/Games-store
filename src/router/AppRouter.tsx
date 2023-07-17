@@ -32,7 +32,7 @@ const AppRouter: FC = () => {
          <Routes>
             <Route path='/signUp' element={<SignUp />} />
             <Route path='/signIn' element={<SignIn />} />
-            <Route path='*' element={<ErrorPage/>} />
+            <Route path='*' element={<SignIn/>} />
          </Routes>
    )
 }
