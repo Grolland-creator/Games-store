@@ -112,6 +112,7 @@ const Products: FC = () => {
                   }
                </div>
                {limit < 100 &&
+                  !GamesLoading &&
                   <div className={cl.pagination}>
                      <Pagination
                         onChange={paginationOnChange}
