@@ -25,7 +25,9 @@ Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+
+If you want to run the command: `serve -s build` and your application is working, 
+then it is better to run the command: `serve -s build & json-server --watch db.json --port 3001` so that the back-end works for you.
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
