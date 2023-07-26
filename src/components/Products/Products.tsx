@@ -1,4 +1,4 @@
-import { FC, useEffect, useState, useCallback } from 'react';
+import { FC, useEffect, useState } from 'react';
 import GameService from '../../api/GameService';
 import { IGame } from '../../models/IGame';
 import { useFetching } from '../../hooks/useFetching';
