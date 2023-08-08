@@ -7,7 +7,7 @@ export const useSortedGames = (games: IGame[], sort: string) => {
    const sortedGames = useMemo(() => {
       if (sort === 'name') {
          return [...games].sort((a, b) => a[sort].toString().localeCompare(b[sort].toString()))
-      } else if (sort === 'price' || sort === 'price' || sort === 'ageLimit') {
+      } else if (sort === 'price' || sort === 'rating' || sort === 'ageLimit') {
          return [...games].sort((a, b) => a[sort] - b[sort])
       }
       return games;
