@@ -123,10 +123,14 @@ const Profile: FC = () => {
                      <Button className={cl.linkAdmin}>Go to the administrator page</Button>
                   </Link>
                }
-               <Button type='primary' onClick={() => {
-                  logout()
-                  navigate('/signIn')
-               }}>
+               <Button
+                  type='primary'
+                  onClick={() => {
+                     logout()
+                     navigate('/signIn')
+                  }}
+                  className={cl.logOut}
+               >
                   Log out
                </Button>
             </div>

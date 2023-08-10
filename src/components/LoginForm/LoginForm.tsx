@@ -106,7 +106,7 @@ const LoginForm: FC<LoginFormProps> = ({ method }) => {
          </Form.Item>
          <Form.Item>
             <Button type="primary" htmlType="submit" loading={isLoading}>
-               {method === 'signIn' ? 'Войти' : 'Зарегистриваться'}
+               {method === 'signIn' ? 'Sign in' : 'Sign up'}
             </Button>
          </Form.Item>
       </Form>
