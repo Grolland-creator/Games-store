@@ -2,6 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+If you want to open this application on your computer, then replace the link in the baseUrl along the path games-store/src/api/constants.ts with http://localhost:3001
 
 ## Available Scripts
 

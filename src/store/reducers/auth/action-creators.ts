@@ -2,6 +2,7 @@ import { AuthActionEnum, SetAuthAction, SetAvatarAction, SetDescriptionAction, S
 import { IUser } from "../../../models/IUser";
 import { AppDispatch } from "../../index";
 import UserService from "../../../api/UserService";
+import bcrypt from 'bcryptjs';
 
 const saveToLocalStorage = (mockUser: IUser) => {
    localStorage.setItem('auth', 'true');
@@ -28,7 +29,7 @@ export const AuthActionCreators = {
       try {
          dispatch(AuthActionCreators.setIsLoading(true));
          const response = await UserService.getUsers()
-         const mockUser = response.data.find(user => (user.username === username || user.email === username) && user.password === password);
+         const mockUser = response.data.find(user => (user.username === username || user.email === username) && bcrypt.compareSync(password, user.password));
          if (mockUser) {
             remember && saveToLocalStorage(mockUser)
             dispatch(AuthActionCreators.setUser(mockUser));
@@ -50,12 +51,13 @@ export const AuthActionCreators = {
          const response = await UserService.getUsers()
          const arrUsers = response.data.filter(user => (user.username === username));
          const arrEmail = response.data.filter(user => (user.email === email));
+         const hashPassword = bcrypt.hashSync(password, 7)
          if (arrUsers.length > 0) {
             dispatch(AuthActionCreators.setSignUpError('There is already an account with username, username should be unique'))
          } else if (arrEmail.length > 0) {
             dispatch(AuthActionCreators.setSignUpError('There is already an account with email data'))
          } else {
-            const mockUser = { username, password, email, id: username, isAdmin: false }
+            const mockUser = { username, password: hashPassword, email, id: username, isAdmin: false }
             await UserService.addUser(mockUser)
             remember && saveToLocalStorage(mockUser)
             dispatch(AuthActionCreators.setUser(mockUser));
