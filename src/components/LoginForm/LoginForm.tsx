@@ -109,7 +109,7 @@ const LoginForm: FC<LoginFormProps> = ({ method }) => {
                {method === 'signIn' ? 'Sign in' : 'Sign up'}
             </Button>
          </Form.Item>
-         {/* <div className={cl.longTime}>*The download may take a long time because the server shuts down after a long period of inactivity.</div> */}
+         <div className={cl.longTime}>*The download may take a long time because the server shuts down after a long period of inactivity.</div>
       </Form>
    );
 };
