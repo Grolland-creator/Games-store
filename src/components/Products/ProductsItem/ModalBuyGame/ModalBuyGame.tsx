@@ -5,6 +5,7 @@ import { rules } from '../../../../utils/rules';
 import { IGame } from '../../../../models/IGame';
 import { IUser } from '../../../../models/IUser';
 import { MessageInstance } from 'antd/es/message/interface';
+import bcrypt from 'bcryptjs';
 
 interface PropsModalBuyGame {
    game: IGame;
@@ -21,7 +22,7 @@ const ModalBuyGame: FC<PropsModalBuyGame> = ({ game, user, messageApi }) => {
 
    const modalOnOk = () => {
       setConfirmLoading(true);
-      if (password !== user.password) {
+      if (!bcrypt.compareSync(password, user.password)) {
          setTimeout(() => {
             setConfirmLoading(false);
             setErrorPassword('Inappropriate password from the account')

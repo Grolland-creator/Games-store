@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Home from '../pages/HomePage';
 import ErrorPage from '../pages/ErrorPage';
 import ProductsPage from '../pages/ProductsPage';
 import AboutPage from '../pages/AboutPage';

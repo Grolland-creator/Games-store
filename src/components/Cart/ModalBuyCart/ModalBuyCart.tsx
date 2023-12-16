@@ -4,6 +4,7 @@ import { Checkbox, Form, Input, Modal } from 'antd';
 import { rules } from '../../../utils/rules';
 import { useActions, useAppSelector } from '../../../hooks/redux';
 import { MessageInstance } from 'antd/es/message/interface';
+import bcrypt from 'bcryptjs';
 
 interface PropsModalBuyCart {
    messageApi: MessageInstance;
@@ -21,7 +22,7 @@ const ModalBuyCart: FC<PropsModalBuyCart> = ({ messageApi, totalPrice }) => {
 
    const modalOnOk = () => {
       setConfirmLoading(true);
-      if (password !== user.password) {
+      if (!bcrypt.compareSync(password, user.password)) {
          setTimeout(() => {
             setConfirmLoading(false);
             setErrorPassword('Inappropriate password from the account')
